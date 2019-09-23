@@ -1,11 +1,7 @@
-body {
-  background-color: #FFF0F5
-} 
+body {background-color: #FFF0F5} 
 
-h2 {
-  font-family: courier; color: #5DADE2
-}
+h2 {font-family: courier; color: #5DADE2}
 
-p {
-  font-family: helvetica
-}
+p {font-family: helvetica}
+
+img {height: 250px}
