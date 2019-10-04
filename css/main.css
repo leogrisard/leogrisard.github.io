@@ -5,3 +5,8 @@ h2 {font-family: courier; color: #5DADE2}
 p {font-family: helvetica}
 
 img {height: 250px}
+
+.title {
+  font-family: Impact, Charcoal, sans-serif; 
+  text-align: center; color: green;
+}
