@@ -17,18 +17,19 @@ img {
 .title {
   font-family:Impact, Charcoal, sans-serif; 
   text-align: center; 
-  color:green;
+  color:#5DADE2;
 }
 
-a:link, a:visited {
+a:link, a:visited, a:hover::after{
   background-color: #5DADE2;
   color: white;
   padding: 15px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  content: "click me!!"
 }
 
-.right_tab {
-  text-align: right
+.tabs{
+  text-align: center;
 }
