@@ -1,35 +1,43 @@
-body {
-  background-color: #FFF0F5
-} 
+body {background-color: rgb(247, 222, 229)} 
 
-h2 {
-  font-family: courier; color: white;
-}
+p {font-family: helvetica}
 
-p {
-  font-family: helvetica
-}
+img {height: 250px}
 
-img {
-  height: 250px
-}
-
-.title {
+.heading {
   font-family:Impact, Charcoal, sans-serif; 
   text-align: center; 
   color:#5DADE2;
 }
 
+h4{
+  font-family: helvetica;
+  text-align: center;
+  color: #5DADE2;
+}
+
 a:link, a:visited, a:hover::after{
   background-color: #5DADE2;
   color: white;
-  padding: 15px 20px;
+  padding: 15px 100px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  content: "click me!!"
+  content: "click me!!";
+  font-family: courier;
 }
 
-.tabs{
-  text-align: center;
+.tabs{text-align: center;}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 0.5em;
+    padding: 0;
+}
+
+#italics {
+  font-style: italic
 }
