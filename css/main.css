@@ -16,18 +16,23 @@ h1, h2, h3, h4, h5, h6{
   color: #5DADE2;
 }
 
+a{transition-duration: 2s}
+
 a:link, a:visited, a:hover::after{
   background-color: #5DADE2;
   color: white;
-  padding: 15px 100px;
+  padding: 10px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   content: "click me!!";
   font-family: courier;
+	margin: 2px;
 }
 
-.tabs{text-align: center;}
+.tabs{
+	text-align: center;
+}
 
 hr {
     display: block;
