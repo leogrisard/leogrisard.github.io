@@ -1,33 +1,40 @@
-body {background-color: rgb(247, 222, 229)} 
+body {
+	background-color: #fc766a
+} 
 
-p {font-family: helvetica}
+p {
+	font-family: helvetica
+}
 
-img {height: 250px}
+img {
+	width: 40%;
+	height: 100px;
+	align: center;
+	display: ;
+}
 
-.heading {
-  font-family:Impact, Charcoal, sans-serif; 
+.subHeading {
   text-align: center; 
-  color:#5DADE2;
+  color:#184a45;
 }
 
 h1, h2, h3, h4, h5, h6{
   font-family: helvetica;
   text-align: center;
-  color: #5DADE2;
+  color: #184a45;
 }
 
-a{transition-duration: 2s}
-
-a:link, a:visited, a:hover::after{
+a:link, a:visited, a:hover::after {
   background-color: #5DADE2;
   color: white;
   padding: 10px 10px;
-  text-align: center;
   text-decoration: none;
   display: inline-block;
   content: "click me!!";
   font-family: courier;
-	margin: 2px;
+	margin: 1px;
+	margin-bottom: 0px;
+	transition: content 1s
 }
 
 .tabs{
@@ -38,7 +45,7 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #b0b8b4;
     margin: 0.5em;
     padding: 0;
 }
