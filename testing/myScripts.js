@@ -11,10 +11,15 @@ function myLoop() {
   console.log(typeof start);
   console.log(typeof end);
     
-  for (var i = start; i <= end; i+=count) 
+  while(start <= end) 
     {
-      document.write( '<p>' + i + '</p>');
-      // document.write(jump);
-      // console.log(i);
+      start+=count;
+      document.write( '<p>' + start + '</p>');
+    }
+  
+  while(start >= end) 
+    {
+      start-=count;
+      document.write( '<p>' + start + '</p>');
     }
 }
