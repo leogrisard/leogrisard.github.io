@@ -1,15 +1,26 @@
-<!doctype>
+<!doctype html>
 <html>
   <head>
-    <title>For Loops</title>
     <style>
-      body{background-color: lightblue}
+      body{
+        font-weight: bold;
+        font-size: 20;
+      }
     </style>
   </head>
-  
   <body>
-    <p> Let's see a for loop. You can change boundaries in Javascript.
-    </p>
-    <script src="myScripts.js"></script>
+    <p> Where do you want to start? </p>
+    <input type="text" id="start" />
+
+    <p> Where do you want to end? </p>
+    <input type="text" id="end" />
+
+    <p> How many do you want to jump by? </p>
+    <input type="text" id="count" />
+    
+    <br />
+    
+    <button onclick="myLoop()">Loop!!</button>
+    <script src=myScript.js></script>
   </body>
 </html>
