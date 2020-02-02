@@ -1,28 +1,264 @@
 <!doctype html>
 <html>
   <head>
+    <title> beanz </title>
     <style>
       body{
         background-color: lightblue;
         font-weight: bold;
         font-size: 20;
-        color: white;
+      }
+      
+      h1, h2{
+        text-decoration: underline;
+      }
+
+      #max{
+        background-color: lightgreen;
+      }
+
+      #power{
+        background-color: lightpink;
+      }
+
+      #average{
+        background-color: #F7DC6F;
+      }
+
+      #h{
+        background-color: lightgreen;
+      }
+
+      #l{
+        background-color: lightpink;
+      }
+
+      #img1{
+        float: right;
+        height: 40%;
+        width: 40%;
+      }
+
+      #xyPlane{
+        background-color: #F7DC6F;
+      }
+
+      #quadradic {
+        background-color: lightgreen;
+      }
+
+      #img2{
+        float: right;
+        height: 40%;
+        width: 40%;
       }
     </style>
+    <script>
+      function myMax(){
+        var s1 = document.getElementById("score1").value;
+        var s2 = document.getElementById("score2").value;
+        var s3 = document.getElementById("score3").value;
+        var highest = Math.max(s1, s2, s3);
+          document.getElementById("highest").innerHTML = "The University will only consider: " + highest + " also, lmao you stinky";
+      }
+
+      function myPow(){
+        var base = document.getElementById("base").value;
+        var exp = document.getElementById("exp").value;
+        var answer = Math.pow(base, exp);
+        document.getElementById("ans1").innerHTML = "your value of the thing you typed is: " + answer + " also, lmao you stinky";
+      }
+
+      function myAvg(){
+        var g1 = document.getElementById("grade1").value;
+        var g2 = document.getElementById("grade2").value;
+        var g3 = document.getElementById("grade3").value;
+        var g4 = document.getElementById("grade4").value;
+        var g5 = document.getElementById("grade5").value;
+        var g6 = document.getElementById("grade6").value;
+        var g7 = document.getElementById("grade7").value;
+        var g8 = document.getElementById("grade8").value;
+        var min = Math.min(g1,g2,g3,g4,g5,g6,g7,g8);
+        var max = Math.max(g1,g2,g3,g4,g5,g6,g7,g8);
+
+        g1 = Number(g1);
+        g2 = Number(g2);
+        g3 = Number(g3);
+        g4 = Number(g4);
+        g5 = Number(g5);
+        g6 = Number(g6);
+        g7 = Number(g7);
+        g8 = Number(g8);
+        min = Number(min);
+        max = Number(max);
+
+        console.log(typeof g1);
+        console.log(typeof g2);
+        console.log(typeof g3);
+        console.log(typeof g4);
+        console.log(typeof g5);
+        console.log(typeof g6);
+        console.log(typeof g7);
+        console.log(typeof g8);
+        console.log(typeof min);
+        console.log(typeof max);
+
+        var avg = (g1+g2+g3+g4+g5+g6+g7+g8-min-max)/8;
+        var rAvg = Math.round(avg);
+        var next = Math.ceil(avg);
+          document.getElementById("rAvg").innerHTML = "Your average grade is: " + rAvg + " lmao you stinky <br/> You are close to your next highest grade: " + next;
+      }
+
+      function hypotenuse(){
+        var a = document.getElementById("l1").value;
+        var b = document.getElementById("l2").value;
+        var a2 = Math.pow(a,2);
+        var b2 = Math.pow(b,2);
+        var added = a2+b2;
+        var sqrt = Math.sqrt(added);
+        var c = sqrt.toFixed(3);
+        document.getElementById("c").innerHTML = "Your hypotenuse is: " + c;
+      }
+
+      function leg(){
+        var leg1 = document.getElementById("leg1").value;
+        var hyp = document.getElementById("hyp").value;
+        var b2 = Math.pow(leg1,2);
+        var c2 = Math.pow(hyp,2);
+        var added = b2+c2;
+        var sqrt = Math.sqrt(added);
+        var leg2 = sqrt.toFixed(3);
+        document.getElementById("leg2").innerHTML = "Your second leg is: " + leg2;
+      }
+
+      function distance(){
+        var x1 = document.getElementById("x1").value;
+        var x2 = document.getElementById("x2").value;
+        var y1 = document.getElementById("y1").value;
+        var y2 = document.getElementById("y2").value;
+        var xdiff = x1-x2;
+        var xd = Math.pow(xdiff,2);
+        var ydiff = y1-y2;
+        var yd = Math.pow(ydiff,2);
+        var added = xd+yd;
+        var d = Math.sqrt(added);
+        var d = d.toFixed(2);
+        document.getElementById("d").innerHTML = "Your distance is: " + d + "<br/> You should not travel more than: " + Math.floor(d);
+      }
+    </script>
   </head>
   <body>
-    <p> Where do you want to start? </p>
-    <input type="text" id="start" />
-
-    <p> Where do you want to end? </p>
-    <input type="text" id="end" />
-
-    <p> How many do you want to jump by? </p>
-    <input type="text" id="count" />
+    <h1>JS Calculator</h1>
+    <div id="max">
+      <h2> Your SAT Scores:</h2>
+      <p>This one calculates your top SAT score</p>
+      <input type="text" id="score1" height="72">
+      <input type="text" id="score2" height="72">
+      <input type="text" id="score3" height="72">
+      <br />
+      <input type="submit" onclick="myMax()">
+      <p id="highest"> </p>
+    </div>
     
-    <br />
+    <div id="power">
+      <h2>Base/Exponent Calculator</h2>
+      <h3>Base:</h3>
+      <input type="text" id="base" height="72">
+      <h3>Exponent:</h3>
+      <input type="text" id="exp" height="72">
+      <br />
+      <input type="submit" onclick="myPow()">
+      <span id="ans1"></span>
+    </div>
     
-    <button onclick="myLoop()">Loop!!</button>
-    <script src=myScripts.js></script>
+    <div id="average">
+      <h2>GPA Calculator</h2>
+      <table>
+        <tr>
+          <td><input type="text" id="grade1" height="72"></td>
+          <td><input type="text" id="grade2" height="72"></td>
+          <td><input type="text" id="grade3" height="72"></td>
+          <td><input type="text" id="grade4" height="72"></td>
+        </tr>
+        <tr>
+          <td><input type="text" id="grade5" height="72"></td>
+          <td><input type="text" id="grade6" height="72"></td>
+          <td><input type="text" id="grade7" height="72"></td>
+          <td><input type="text" id="grade8" height="72"></td>
+        </tr>
+      </table>
+      <input type="submit" onclick="myAvg()">
+      <p id="rAvg"> </p>
+    </div>
+    
+    <div id="h">
+      <img id="img1" src="data:image/png;base64,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">
+      <h1><u>Pythagorean Theorem Calculator</u></h1>
+      <h2>To find Hypotenuse:</h2>
+        <h3>Leg 1</h3>
+        <input type="text" id="l1" height="72">
+        <h3>Leg 2</h3>
+        <input type="text" id="l2" height="72">
+        <br />
+        <input type="submit" onclick="hypotenuse()">
+        <p id="c"> </p>
+      <h2>To find Leg:</h2>
+        <h3>Leg</h3>
+        <input type="text" id="leg1" height="72">
+        <h3>Hypotenuse</h3>
+        <input type="text" id="hyp" height="72">
+        <br />
+        <input type="submit" onclick="leg()">
+        <p id="leg2"> </p>
+    </div>
+    
+    <div id="xyPlane">
+      <h1><u>XY Coordinate Plane</u></h1>
+      <table>
+        <tr>
+          <td>
+            <span id="">
+              <h3>X1</h3>
+              <input type="text" id="x1" height="72">
+            </span>
+          </td>
+          <td>
+            <h3>X2</h3>
+            <input type="text" id="x2" height="72">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3>Y1</h3>
+            <input type="text" id="y1" height="72">
+          </td>
+          <td>
+            <h3>Y2</h3>
+            <input type="text" id="y2" height="72">
+          </td>
+        </tr>
+      </table>
+      <br />
+      <input type="submit" onclick="distance()">
+      <p id="d"> </p>
+    </div>
+    
+    <div id="quadradic">
+      <h1><u>Quadratic Formula Calculator</u></h1>
+      <img id="img2" alt="UwU" src="https://cdn.kastatic.org/googleusercontent/nI2riiPBcl9hZ22KKdYZGFmsVNhcKLiuwPly9l1tU5BMaqcOs9bfPKRyoGAFgK-PNpc-c7x_tNuskGdzawvy_Pza"
+      />
+      <h3>a</h3>
+      <input type="text" id="a" height="72" />
+      <h3>b</h3>
+      <input type="text" id="b" height="72" />
+      <h3>c</h3>
+      <input type="text" id="c" height="72" />
+      <br />
+      <input type="submit" onclick="quadratic()" />
+      <p id="pX"></p>
+      <p id="nX"></p>
+      <p id="sol"></p>
+    </div>
+    
   </body>
 </html>
